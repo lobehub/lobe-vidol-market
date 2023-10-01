@@ -63,12 +63,12 @@ def update_main_index(index: dict):
 
     index_ext = {agent['url']: agent for agent in index['agents']}
     index_ext_urls = index_ext.keys()
-    for main_ext_url, master_ext in main_exts.items():
+    for main_ext_url, main_ext in main_exts.items():
         if main_ext_url in index_ext_urls:
             index_ext_keys = index_ext[main_ext_url].keys()
-            for main_exts_key in master_ext.keys():
+            for main_exts_key in main_ext.keys():
                 if main_exts_key not in index_ext_keys:
-                    index_ext[main_ext_url][main_exts_key] = master_ext[main_exts_key]
+                    index_ext[main_ext_url][main_exts_key] = main_ext[main_exts_key]
 
     new_main_index = {
         'agents': list(index_ext.values())}
