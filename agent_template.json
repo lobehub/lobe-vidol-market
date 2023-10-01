@@ -1,5 +1,7 @@
 {
   "name": "Agent Name",
+  "cnName": "角色中文名",
   "url": "https://github.com/OWNER/REPO.git",
-  "description": "Agent Description"
+  "description": "Agent Description",
+  "homepage": "homepage link of model"
 }
