@@ -17,6 +17,12 @@
             "url": "https://github.com/v-idol/vidol-agent-mimi.git",
             "description": "\u7c73\u7c73\u662f\u4e2a\u5c0f\u5b69\u5b50",
             "created": "2023-10-01"
+        },
+        {
+            "name": "\u5e03\u6d1b\u59ae\u5a05",
+            "url": "https://github.com/v-idol/vidol-agent-bronya.git",
+            "description": "\u5e03\u6d1b\u59ae\u5a05\u662f\u5d29\u574f\u661f\u7a79\u94c1\u9053\u4e2d\u7684\u89d2\u8272",
+            "created": "2023-10-01"
         }
     ]
 }
