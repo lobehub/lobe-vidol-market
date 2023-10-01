@@ -1,6 +1,6 @@
 # This is the Agent Index of Vidol Chat
 
-[Vidol Chat](https://github.com/v-idol/vidol-chat) accesses [`index.json`](https://github.com/v-idol/vidol-chat-agents/blob/main/index.json) from this repo to show user the list of available agents.
+[Vidol Chat](https://github.com/v-idol/vidol.chat) accesses [`index.json`](https://github.com/v-idol/vidol-chat-agents/blob/main/index.json) from this repo to show user the list of available agents.
 
 ## How to submit agent
 
