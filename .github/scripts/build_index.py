@@ -58,7 +58,7 @@ def update_index(exts: dict):
 def update_main_index(index: dict):
     # add keys from main/index that are not in agents to agents as new main/index
     with open(deploy_index_path, 'r') as f:
-        main_exts = {agents['url']: agent for agent in json.load(f)[
+        main_exts = {agent['url']: agent for agent in json.load(f)[
             'agents']}
 
     index_ext = {agent['url']: agent for agent in index['agents']}
