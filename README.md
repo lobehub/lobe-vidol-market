@@ -2,9 +2,11 @@
 
 [Vidol Chat](https://github.com/v-idol/vidol.chat) accesses [`index.json`](https://github.com/v-idol/vidol-chat-agents/blob/main/index.json) from this repo to show user the list of available agents.
 
+**English** · [简体中文](./README.zh-CN.md)
+
 ## How to submit agent
 
-If you wish to add an agent onto the index, make an entry in `agents` directory using `agent_template.json`, write a short description then open as a pull request ty!
+If you wish to add an agent onto the index, make an entry in `agents` directory using `agent_template.json`, write a short description then open as a pull request!
 
 ### Step by step instructions
 

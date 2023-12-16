@@ -1,5 +1,26 @@
 {
+  "agentId": "Agent ID",
   "name": "Agent Name",
-  "url": "https://github.com/OWNER/REPO.git",
-  "description": "Agent Description"
+  "description": "Agent Description",
+  "homepage": "Homepage for the Agent",
+  "systemRole": "The system role prompt for the agent",
+  "touch": {
+    "head": [],
+    "arm": [],
+    "leg": [],
+    "chest": [],
+    "belly": [],
+    "enabled": false
+  },
+  "tts": {
+    "engine": "TTS engine name",
+    "locale": "locale name",
+    "voice": "Microsoft Server Speech Text to Speech Voice (zh-CN, HuihuiRUS)",
+    "speed": 1.0,
+    "pitch": 1.0
+  },
+  "model": "model file path",
+  "cover": "cover file path",
+  "avatar": "avatar file path",
+  "readme": "readme"
 }
