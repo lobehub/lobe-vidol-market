@@ -12,8 +12,8 @@
   "author": "rdmclin2 <rdmclin2@163..com>",
   "type": "module",
   "scripts": {
-    "build": "npm scripts/build.ts",
-    "test": "npm scripts/test.ts"
+    "build": "bun scripts/build.ts",
+    "test": "bun scripts/test.ts"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
