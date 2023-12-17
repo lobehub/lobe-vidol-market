@@ -1,0 +1,23 @@
+{
+  "name": "@v-idol/vidol-chat-market",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Vidol Chat Market Index",
+  "homepage": "https://github.com/v-idol/vidol-chat-market",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v-idol/vidol-chat-market.git"
+  },
+  "license": "MIT",
+  "author": "rdmclin2 <rdmclin2@163..com>",
+  "type": "module",
+  "scripts": {
+    "build": "bun scripts/build.ts",
+    "test": "bun scripts/test.ts"
+  },
+  "devDependencies": {
+    "consola": "^3",
+    "fs-extra": "^11",
+    "typescript": "^5"
+  }
+}
