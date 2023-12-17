@@ -1,5 +1,5 @@
 import { readJSONSync } from "fs-extra";
-import { readFileSync, readdirSync } from "node:fs";
+import { readdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -9,11 +9,10 @@ export const root = resolve(__dirname, "..");
 
 export const agentsDir = resolve(root, "./src/agents");
 export const schemasDir = resolve(root, "./schema");
-export const localesDir = resolve(root, "./locales");
 export const publicDir = resolve(root, "./public");
+export const publicAgentDir = resolve(root, "./public/agents");
 
 export const agents = readdirSync(agentsDir, { withFileTypes: true });
-export const agentLocales = readdirSync(localesDir, { withFileTypes: true });
 
 export const templatePath = resolve(root, "agent-template.json");
 export const templateFullPath = resolve(root, "agent-template-full.json");
@@ -33,5 +32,3 @@ export const host = "https://chat-agents.lobehub.com";
 export const githubHomepage = "https://github.com/lobehub/lobe-chat-agents";
 
 export const readmeSplit = "<!-- AWESOME PROMPTS -->";
-
-export { default as config } from "../.i18nrc.js";

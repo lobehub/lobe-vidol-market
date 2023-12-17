@@ -46,4 +46,4 @@ public
 .eslintrc.*js
 .remarkrc.*js
 .env
-bun.lockb
+npm.lockb

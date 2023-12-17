@@ -12,12 +12,13 @@
   "author": "rdmclin2 <rdmclin2@163..com>",
   "type": "module",
   "scripts": {
-    "build": "bun scripts/build.ts",
-    "test": "bun scripts/test.ts"
+    "build": "npm scripts/build.ts",
+    "test": "npm scripts/test.ts"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
-    "consola": "^3",
+    "consola": "^3.0.0",
+    "dayjs": "^1.11.10",
     "fs-extra": "^11",
     "lodash-es": "^4.17.21",
     "typescript": "^5",
