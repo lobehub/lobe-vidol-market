@@ -16,8 +16,15 @@
     "test": "bun scripts/test.ts"
   },
   "devDependencies": {
+    "@types/node": "^20.10.4",
     "consola": "^3",
     "fs-extra": "^11",
-    "typescript": "^5"
+    "lodash-es": "^4.17.21",
+    "typescript": "^5",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.3"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4"
   }
 }
