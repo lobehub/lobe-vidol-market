@@ -14,21 +14,7 @@ export const publicAgentDir = resolve(root, "./public/agents");
 
 export const agents = readdirSync(agentsDir, { withFileTypes: true });
 
-export const templatePath = resolve(root, "agent-template.json");
-export const templateFullPath = resolve(root, "agent-template-full.json");
-
 export const indexPath = resolve(publicDir, "index.json");
-
-export const indexCnPath = resolve(publicDir, "index.zh-CN.json");
-
-export const readmePath = resolve(root, "README.md");
-
-export const readmeCnPath = resolve(root, "README.zh-CN.md");
 
 export const metaPath = resolve(root, "meta.json");
 export const meta = readJSONSync(metaPath);
-
-export const host = "https://chat-agents.lobehub.com";
-export const githubHomepage = "https://github.com/lobehub/lobe-chat-agents";
-
-export const readmeSplit = "<!-- AWESOME PROMPTS -->";

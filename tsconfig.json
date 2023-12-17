@@ -3,7 +3,7 @@
     "module": "ESNext",
     "target": "es2017",
     "noEmit": true,
-    "moduleResolution": "npmdler"
+    "moduleResolution": "bundler"
   },
   "include": ["scripts"]
 }
