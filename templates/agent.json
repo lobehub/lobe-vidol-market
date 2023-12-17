@@ -1,8 +1,5 @@
 {
-  "agentId": "Agent ID",
-  "name": "Agent Name",
-  "description": "Agent Description",
-  "homepage": "Homepage for the Agent",
+  "agentId": "Agent ID # Same as the folder name",
   "systemRole": "The system role prompt for the agent",
   "tts": {
     "engine": "TTS engine name",
@@ -11,8 +8,13 @@
     "speed": 1.0,
     "pitch": 1.0
   },
-  "model": "model file path",
-  "cover": "cover file path",
-  "avatar": "avatar file path",
-  "readme": "readme"
+  "meta": {
+    "name": "Agent Name",
+    "description": "Agent Description",
+    "homepage": "Homepage for anywhere",
+    "model": "model file path",
+    "cover": "cover file path",
+    "avatar": "avatar file path",
+    "readme": "readme"
+  }
 }
