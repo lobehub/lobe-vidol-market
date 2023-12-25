@@ -59,9 +59,6 @@ class Builder {
       // write agent to public dir
       writeJSONSync(resolve(publicAgentDir, file.name), formatAgent);
 
-      // write agent to agents dir
-      writeJSONSync(resolve(agentsDir, file.name), formatAgent);
-
       // add agent meta to index
       agentIndex.push({
         agentId: id,
