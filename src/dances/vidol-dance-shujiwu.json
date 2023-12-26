@@ -1,0 +1,9 @@
+{
+  "danceId": "vidol-dance-shujiwu",
+  "name": "书记舞2023",
+  "src": "https://registry.npmmirror.com/@v-idol/vidol-dance-shujiwu/1.0.0/files/书记舞.vmd",
+  "audio": "https://registry.npmmirror.com/@v-idol/vidol-dance-shujiwu/1.0.0/files/チカっとチカ千花っ.mp3",
+  "cover": "https://registry.npmmirror.com/@v-idol/vidol-dance-shujiwu/1.0.0/files/cover.jpg",
+  "thumb": "https://registry.npmmirror.com/@v-idol/vidol-dance-shujiwu/1.0.0/files/thumb.jpg",
+  "readme": "﻿这是【?チカっとチカ千花っ?】的舞蹈MMD数据！ \r\n请大家自由利用！\r\n配布视频地址（camera）：https://www.bilibili.com/video/av42563692/\r\n增加camera2（仿动画ED视角）\r\n\r\n-------\r\n\r\n使用时请注明\r\n【动作】兰若_Ruo\r\n【镜头】-鬼瞳-\r\n【表情】Viero月城\r\n\r\n-------\r\n请从0帧开始加载。\r\n动作数据是在Motionbuilder里面K的，可能会有微小滑步\r\n【注意】使用动作数据时，请关闭 左足IK、左つま先IK、右足IK、右つま先IK，4个IK骨骼\r\n\r\n-------\r\n※可以的事情\r\n--镜头的改造、调整\r\n--表情的改造、调整\r\n\r\n※禁止的事情\r\n--对本数据的临摹\r\n--未改造的数据进行再次配布（也就是传说中的二配。公开、私下都不行，请注意，谢谢）\r\n--R18/色情作品的使用\r\n--商业利用\r\n--作品的转载（自转载）\r\n\r\n※请遵守动作&模型的规约。\r\n\r\n-------\r\n感谢你下载我们的数据，非常期待你的作品！使用愉快：）\r\n\r\n\r\n--------\r\n2019.2.3\r\n"
+}
