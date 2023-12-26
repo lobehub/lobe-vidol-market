@@ -8,11 +8,15 @@ export const __dirname = dirname(__filename);
 export const root = resolve(__dirname, "..");
 
 export const agentsDir = resolve(root, "./src/agents");
+export const dancesDir = resolve(root, "./src/dances");
+
 export const schemasDir = resolve(root, "./schema");
 export const publicDir = resolve(root, "./public");
 export const publicAgentDir = resolve(root, "./public/agents");
+export const publicDanceDir = resolve(root, "./public/dances");
 
 export const agents = readdirSync(agentsDir, { withFileTypes: true });
+export const dances = readdirSync(dancesDir, { withFileTypes: true });
 
 export const indexPath = resolve(publicDir, "index.json");
 
