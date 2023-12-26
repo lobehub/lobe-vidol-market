@@ -1,6 +1,7 @@
 {
   "agentId": "Agent ID # Same as the folder name",
   "systemRole": "The system role prompt for the agent",
+  "createAt": "YYYY-MM-DD",
   "tts": {
     "engine": "TTS engine name",
     "locale": "locale name",

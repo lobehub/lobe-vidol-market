@@ -19,5 +19,3 @@
 4. 将其移动到 `src\agents` 文件夹下。
 
 5. 提交 PR，等待 Review，合并后会自动重新构建 `public/agents/index.json` 文件。
-
-- `created` 创建日期字段会自动添加，请确保 `agentId` 的唯一性。
