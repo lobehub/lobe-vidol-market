@@ -88,7 +88,11 @@ class Builder {
     );
 
     consola.info(`collected ${dances.length} dances`);
-    return dances;
+    const dancesIndex = { ...meta, agents };
+
+    const indexFileName = "index.json";
+    writeJSONSync(resolve(publicDanceDir, indexFileName), dancesIndex);
+    consola.success(`build complete`);
   };
 
   buildAgents = async () => {
@@ -121,18 +125,16 @@ class Builder {
     );
 
     consola.info(`collected ${agents.length} agents`);
-    return agents;
-  };
-
-  buildAssets = async () => {
-    const agents = await this.buildAgents();
-    const dances = await this.buildDances();
-
-    const agentsIndex = { ...meta, agents, dances };
+    const agentsIndex = { ...meta, agents };
 
     const indexFileName = "index.json";
     writeJSONSync(resolve(publicAgentDir, indexFileName), agentsIndex);
     consola.success(`build complete`);
+  };
+
+  buildAssets = async () => {
+    await this.buildAgents();
+    await this.buildDances();
   };
 }
 
