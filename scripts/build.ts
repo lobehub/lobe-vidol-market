@@ -5,8 +5,8 @@ import { resolve } from "node:path";
 import { zodToJsonSchema } from "zod-to-json-schema";
 
 import {
-  agents,
-  dances,
+  agentFiles,
+  danceFiles,
   meta,
   publicDir,
   publicAgentDir,
@@ -28,8 +28,8 @@ class Builder {
     checkDir(publicDir);
     checkDir(publicAgentDir);
     checkDir(publicDanceDir);
-    this.agents = agents;
-    this.dances = dances;
+    this.agents = agentFiles;
+    this.dances = danceFiles;
   }
 
   run = async () => {
@@ -73,7 +73,7 @@ class Builder {
       const formatDance = formatDanceSchema(dance);
 
       // write agent to public dir
-      writeJSONSync(resolve(publicAgentDir, file.name), formatDance);
+      writeJSONSync(resolve(publicDanceDir, file.name), formatDance);
 
       // add agent meta to index
       danceIndex.push({
@@ -88,7 +88,7 @@ class Builder {
     );
 
     consola.info(`collected ${dances.length} dances`);
-    const dancesIndex = { ...meta, agents };
+    const dancesIndex = { ...meta, dances };
 
     const indexFileName = "index.json";
     writeJSONSync(resolve(publicDanceDir, indexFileName), dancesIndex);

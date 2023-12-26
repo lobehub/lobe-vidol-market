@@ -15,8 +15,8 @@ export const publicDir = resolve(root, "./public");
 export const publicAgentDir = resolve(root, "./public/agents");
 export const publicDanceDir = resolve(root, "./public/dances");
 
-export const agents = readdirSync(agentsDir, { withFileTypes: true });
-export const dances = readdirSync(dancesDir, { withFileTypes: true });
+export const agentFiles = readdirSync(agentsDir, { withFileTypes: true });
+export const danceFiles = readdirSync(dancesDir, { withFileTypes: true });
 
 export const indexPath = resolve(publicDir, "index.json");
 
