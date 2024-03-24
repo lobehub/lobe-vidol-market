@@ -19,3 +19,7 @@
 4. 将其移动到 `src\agents` 文件夹下。
 
 5. 提交 PR，等待 Review，合并后会自动重新构建 `public/agents/index.json` 文件。
+
+## 如何提交 Dance
+
+同上，只不过文件夹改为 `templates/dance.json`
