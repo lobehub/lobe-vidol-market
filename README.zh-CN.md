@@ -10,7 +10,7 @@
 
 ### 详细步骤指引
 
-1. Fork 这个仓库。a
+1. Fork 这个仓库。
 
 2. 复制一份 `templates/agent.json` 文件。
 
