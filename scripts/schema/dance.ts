@@ -4,13 +4,45 @@ import { z } from "zod";
  */
 export const VidolDanceSchema = z.object({
   danceId: z.string(),
+  /**
+   * 舞蹈名
+   */
   name: z.string(),
+  /**
+   * 舞蹈文件地址
+   */
   src: z.string(),
+  /**
+   * 作者名
+   */
+  author: z.string(),
+  /**
+   * 作者主页
+   */
+  homepage: z.string(),
+  /**
+   * 音频文件地址
+   */
   audio: z.string(),
+  /**
+   * 封面图片地址，推荐尺寸 300 * 400 倍数
+   */
   cover: z.string(),
+  /**
+   * 缩略图地址，推荐尺寸 128 * 128 倍数
+   */
   thumb: z.string(),
+  /**
+   * 说明文字
+   */
   readme: z.string(),
+  /**
+   * 创建时间
+   */
   createAt: z.string(),
+  /**
+   * schema 版本
+   */
   schemaVersion: z.number(),
 });
 
