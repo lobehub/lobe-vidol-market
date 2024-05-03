@@ -1,6 +1,8 @@
 {
   "danceId": "vidol-dance-sample",
   "createAt": "2023-10-30",
+  "author": "rdmclin2",
+  "homepage": "https://github.com/rdmclin2",
   "name": "开心摇",
   "src": "https://registry.npmmirror.com/@v-idol/vidol-dance-sample/1.0.0/files/KX-YAO.vmd",
   "audio": "https://registry.npmmirror.com/@v-idol/vidol-dance-sample/1.0.0/files/KX-YAO.mp3",
