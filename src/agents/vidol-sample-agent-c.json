@@ -18,6 +18,7 @@
     "homepage": "https://hub.vroid.com/characters/1248981995540129234/models/8640547963669442173",
     "description": "C 模型是 Vroid 的示例角色",
     "category": "Vroid",
+    "gender": "Female",
     "model": "https://registry.npmmirror.com/@v-idol/vidol-agent-sample-c/1.0.0/files/model.vrm",
     "cover": "https://registry.npmmirror.com/@v-idol/vidol-agent-sample-c/1.0.0/files/cover.png",
     "avatar": "https://registry.npmmirror.com/@v-idol/vidol-agent-sample-c/1.0.0/files/avatar.webp",

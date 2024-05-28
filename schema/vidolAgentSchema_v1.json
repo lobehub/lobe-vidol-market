@@ -1,0 +1,189 @@
+{
+  "type": "object",
+  "properties": {
+    "agentId": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "homepage": {
+      "type": "string"
+    },
+    "tts": {
+      "type": "object",
+      "properties": {
+        "engine": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "voice": {
+          "type": "string"
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3,
+          "default": 1
+        },
+        "pitch": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2,
+          "default": 1
+        }
+      },
+      "required": [
+        "engine",
+        "locale",
+        "voice"
+      ],
+      "additionalProperties": false
+    },
+    "touch": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "emotion": {
+                "type": "string",
+                "enum": [
+                  "happy",
+                  "angry",
+                  "sad",
+                  "surprised",
+                  "relaxed",
+                  "neutral",
+                  "blink",
+                  "blinkLeft",
+                  "blinkRight"
+                ]
+              },
+              "motion": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "arm": {
+          "type": "array",
+          "items": {
+            "$ref": "#/properties/touch/properties/header/items"
+          }
+        },
+        "leg": {
+          "type": "array",
+          "items": {
+            "$ref": "#/properties/touch/properties/header/items"
+          }
+        },
+        "chest": {
+          "type": "array",
+          "items": {
+            "$ref": "#/properties/touch/properties/header/items"
+          }
+        },
+        "belly": {
+          "type": "array",
+          "items": {
+            "$ref": "#/properties/touch/properties/header/items"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string",
+          "enum": [
+            "Male",
+            "Female",
+            "Other"
+          ]
+        },
+        "homepage": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Anime",
+            "Game",
+            "Realistic",
+            "VTuber",
+            "Book",
+            "History",
+            "Movie",
+            "Animal",
+            "Vroid",
+            "Other"
+          ]
+        },
+        "readme": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "gender",
+        "cover",
+        "avatar"
+      ],
+      "additionalProperties": false
+    },
+    "systemRole": {
+      "type": "string"
+    },
+    "greeting": {
+      "type": "string"
+    },
+    "createAt": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "agentId",
+    "author",
+    "homepage",
+    "meta",
+    "systemRole",
+    "greeting",
+    "createAt",
+    "schemaVersion"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

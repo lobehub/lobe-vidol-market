@@ -25,17 +25,17 @@ export const VidolDanceSchema = z.object({
    */
   audio: z.string(),
   /**
-   * 封面图片地址，推荐尺寸 300 * 400 倍数
+   * 封面图片地址，推荐尺寸 320 * 480 倍数
    */
   cover: z.string(),
   /**
-   * 缩略图地址，推荐尺寸 128 * 128 倍数
+   * 缩略图地址，推荐尺寸 256 * 256 倍数
    */
   thumb: z.string(),
   /**
    * 说明文字
    */
-  readme: z.string(),
+  readme: z.string().optional(),
   /**
    * 创建时间
    */
