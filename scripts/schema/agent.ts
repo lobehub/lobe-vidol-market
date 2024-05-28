@@ -1,4 +1,19 @@
-import { z } from "zod";
+import {z} from "zod";
+import {CategoryEnum, GenderEnum, EmotionEnum} from "./enum";
+
+export const TouchActionSchema = z.object({
+    emotion: EmotionEnum.optional(),
+    motion: z.string().optional(),
+    text: z.string(),
+});
+
+export const TouchActionConfigSchema = z.object({
+    header: z.array(TouchActionSchema).optional(),
+    arm: z.array(TouchActionSchema).optional(),
+    leg: z.array(TouchActionSchema).optional(),
+    chest: z.array(TouchActionSchema).optional(),
+    belly: z.array(TouchActionSchema).optional(),
+})
 
 /**
  * TTS Schema
@@ -26,44 +41,33 @@ export const TTSSchema = z.object({
   pitch: z.number().gte(0).lte(2.0).default(1.0).optional(),
 });
 
-/**
- * Category Enum, 当前包括 Anime, Game, Realistic, VTuber, Book, History, Movie, Animal, Vroid
- */
-const CategoryEnum = z.enum([
-  "Anime",
-  "Game",
-  "Realistic",
-  "VTuber",
-  "Book",
-  "History",
-  "Movie",
-  "Animal",
-  "Vroid",
-]);
-
 export const MetaSchema = z.object({
   /**
-   * 模型名称
+   * 角色名
    */
   name: z.string(),
   /**
-   * 模型描述
+   * 角色描述
    */
   description: z.string(),
   /**
-   * 模型主页，比如 Vroid Hub 链接
+   * 角色性别
+   */
+  gender: GenderEnum,
+  /**
+   * 角色主页，比如 Vroid Hub 链接
    */
   homepage: z.string().optional(),
   /**
    * 模型地址
    */
-  model: z.string(),
+  model: z.string().optional(),
   /**
-   * 模型封面图片地址, 推荐尺寸 300 * 400 倍数
+   * 角色封面图片地址, 推荐尺寸 320 * 480 倍数
    */
   cover: z.string(),
   /**
-   * 模型头像图片地址，推荐尺寸 150 * 150 倍数
+   * 角色头像图片地址，推荐尺寸 256 * 256 倍数
    */
   avatar: z.string(),
   /**
@@ -96,6 +100,10 @@ export const VidolAgentSchema = z.object({
    * 语音合成配置
    */
   tts: TTSSchema.optional(),
+  /**
+   * 触摸配置
+   */
+  touch: TouchActionConfigSchema.optional(),
   /**
    * 角色元信息
    */

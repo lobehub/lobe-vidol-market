@@ -16,6 +16,7 @@
     "name": "米米",
     "description": "米米是个可爱的小女孩",
     "category": "Vroid",
+    "gender": "Female",
     "homepage": "https://hub.vroid.com/characters/5322942975009642877/models/6809135692840126882",
     "readme": "MimiMechanism",
     "model": "https://registry.npmmirror.com/@v-idol/vidol-agent-mimi/1.0.0/files/model.vrm",

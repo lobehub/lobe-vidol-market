@@ -2,15 +2,20 @@
   "agentId": "Agent ID # Same as the folder name",
   "systemRole": "The system role prompt for the agent",
   "createAt": "YYYY-MM-DD",
+  "greeting": "Hello Message",
+  "author": "Your Name",
+  "homepage": "Your Homepage",
   "tts": {
-    "engine": "TTS engine name",
-    "locale": "locale name",
-    "voice": "Microsoft Server Speech Text to Speech Voice (zh-CN, HuihuiRUS)",
+    "engine": "edge",
+    "locale": "zh-CN",
+    "voice": "Microsoft Server Speech Text to Speech Voice (Example: zh-CN-XiaoxiaoNeural)",
     "speed": 1.0,
     "pitch": 1.0
   },
   "meta": {
     "name": "Agent Name",
+    "category": "Category",
+    "gender": "Female/Male/Other",
     "description": "Agent Description",
     "homepage": "Homepage for anywhere",
     "model": "model file path",
