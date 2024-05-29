@@ -12,6 +12,38 @@
     "speed": 1,
     "pitch": 1
   },
+  "touch": {
+    "header": [
+      {
+        "emotion": "neutral",
+        "text": "有什么需要布洛妮娅做的吗，开拓者？"
+      }
+    ],
+    "arm": [
+      {
+        "emotion": "surprised",
+        "text": "请保持适当的距离，开拓者。"
+      }
+    ],
+    "leg": [
+      {
+        "emotion": "neutral",
+        "text": "..."
+      }
+    ],
+    "chest": [
+      {
+        "emotion": "angry",
+        "text": "这是不恰当的行为，开拓者。"
+      }
+    ],
+    "belly": [
+      {
+        "emotion": "surprised",
+        "text": "布洛妮娅并不习惯这样的接触。"
+      }
+    ]
+  },
   "meta": {
     "name": "布洛妮娅",
     "category": "Game",

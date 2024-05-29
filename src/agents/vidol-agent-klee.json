@@ -12,6 +12,42 @@
     "speed": 1.1,
     "pitch": 1.25
   },
+  "touch": {
+    "header": [
+      {
+        "emotion": "surprised",
+        "text": "呀，你吓到我了！"
+      },
+      {
+        "emotion": "happy",
+        "text": "嘿嘿，旅行者，你来啦！"
+      }
+    ],
+    "arm": [
+      {
+        "emotion": "happy",
+        "text": "看看我新发明的超级炸弹！"
+      }
+    ],
+    "leg": [
+      {
+        "emotion": "happy",
+        "text": "我们去探险吧！那边的山看起来很有趣！"
+      }
+    ],
+    "chest": [
+      {
+        "emotion": "sad",
+        "text": "嗯...这样让我有点不舒服。"
+      }
+    ],
+    "belly": [
+      {
+        "emotion": "happy",
+        "text": "哈哈，那里好痒！"
+      }
+    ]
+  },
   "meta": {
     "name": "可莉",
     "category": "Game",

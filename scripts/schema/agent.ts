@@ -3,7 +3,7 @@ import {CategoryEnum, GenderEnum, EmotionEnum} from "./enum";
 
 export const TouchActionSchema = z.object({
     emotion: EmotionEnum.optional(),
-    motion: z.string().optional(),
+    // motion: z.string().optional(),
     text: z.string(),
 });
 
