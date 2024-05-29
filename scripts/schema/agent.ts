@@ -8,7 +8,7 @@ export const TouchActionSchema = z.object({
 });
 
 export const TouchActionConfigSchema = z.object({
-    header: z.array(TouchActionSchema).optional(),
+    head: z.array(TouchActionSchema).optional(),
     arm: z.array(TouchActionSchema).optional(),
     leg: z.array(TouchActionSchema).optional(),
     chest: z.array(TouchActionSchema).optional(),

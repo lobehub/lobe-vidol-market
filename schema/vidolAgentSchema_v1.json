@@ -45,7 +45,7 @@
     "touch": {
       "type": "object",
       "properties": {
-        "header": {
+        "head": {
           "type": "array",
           "items": {
             "type": "object",
@@ -80,25 +80,25 @@
         "arm": {
           "type": "array",
           "items": {
-            "$ref": "#/properties/touch/properties/header/items"
+            "$ref": "#/properties/touch/properties/head/items"
           }
         },
         "leg": {
           "type": "array",
           "items": {
-            "$ref": "#/properties/touch/properties/header/items"
+            "$ref": "#/properties/touch/properties/head/items"
           }
         },
         "chest": {
           "type": "array",
           "items": {
-            "$ref": "#/properties/touch/properties/header/items"
+            "$ref": "#/properties/touch/properties/head/items"
           }
         },
         "belly": {
           "type": "array",
           "items": {
-            "$ref": "#/properties/touch/properties/header/items"
+            "$ref": "#/properties/touch/properties/head/items"
           }
         }
       },
