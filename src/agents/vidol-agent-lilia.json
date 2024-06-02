@@ -19,8 +19,8 @@
     "gender": "Female",
     "homepage": "https://hub.vroid.com/characters/864745176177452480/models/2583417406859875501",
     "readme": "Nya Nya",
-    "model": "https://registry.npmmirror.com/@v-idol/vidol-agent-lilia/1.0.0/files/model.vrm",
-    "cover": "https://registry.npmmirror.com/@v-idol/vidol-agent-lilia/1.0.0/files/cover.jpg",
-    "avatar": "https://registry.npmmirror.com/@v-idol/vidol-agent-lilia/1.0.0/files/avatar.jpg"
+    "model": "https://r2.vidol.chat/agents/vidol-agent-lilia/model.vrm",
+    "cover": "https://r2.vidol.chat/agents/vidol-agent-lilia/cover.jpg",
+    "avatar": "https://r2.vidol.chat/agents/vidol-agent-lilia/avatar.jpg"
   }
 }
