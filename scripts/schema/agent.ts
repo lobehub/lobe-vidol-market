@@ -80,6 +80,14 @@ export const MetaSchema = z.object({
   readme: z.string().optional(),
 });
 
+export const LLMParams =  z.object({
+  frequency_penalty: z.number().default(0),
+  max_tokens: z.number(),
+  presence_penalty: z.number().default(0),
+  temperature: z.number().default(0.6),
+  top_p: z.number().default(1),
+})
+
 /**
  * Agent Schema
  */
@@ -116,6 +124,14 @@ export const VidolAgentSchema = z.object({
    * 问候语，角色在每次聊天开始时说的第一句话
    */
   greeting: z.string(),
+  /**
+   * 模型
+   */
+  model: z.string().optional(),
+  /**
+   * 模型参数
+   */
+  params: LLMParams.optional(),
   /**
    * 创建时间
    */

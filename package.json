@@ -18,6 +18,8 @@
   "devDependencies": {
     "@types/node": "^20.12.8",
     "consola": "^3.2.3",
+    "dotenv": "^16",
+    "@octokit/rest": "^20",
     "dayjs": "^1.11.11",
     "fs-extra": "^11.2.0",
     "lodash-es": "^4.17.21",
