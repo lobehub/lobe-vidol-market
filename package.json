@@ -13,7 +13,8 @@
   "type": "module",
   "scripts": {
     "build": "bun scripts/build.ts",
-    "test": "bun scripts/test.ts"
+    "test": "bun scripts/test.ts",
+    "submit": "bun scripts/autoSubmit.ts"
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
