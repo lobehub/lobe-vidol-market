@@ -55,10 +55,6 @@ export const MetaSchema = z.object({
    */
   gender: GenderEnum,
   /**
-   * 角色主页，比如 Vroid Hub 链接
-   */
-  homepage: z.string().optional(),
-  /**
    * 模型地址
    */
   model: z.string().optional(),

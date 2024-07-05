@@ -16,7 +16,7 @@ const ERROR_LABEL = '🚨 Auto Check Fail';
 
 class AutoSubmit {
   owner = 'lobehub';
-  repo = 'lobe-chat-agents';
+  repo = 'lobe-vidol-market';
   issueNumber = Number(process.env.ISSUE_NUMBER);
   private octokit: Octokit;
 
@@ -231,17 +231,22 @@ class AutoSubmit {
     const json = this.markdownToJson(data.body) as any;
     const agent = {
       author: data.user.login,
-      config: {
-        systemRole: json.systemRole,
-      },
+      systemRole: json.systemRole,
       homepage: data.user.html_url,
-      identifier: kebabCase(json.identifier),
+      agentId: kebabCase(json.identifier),
       meta: {
+        name: json.name,
         avatar: json.avatar,
+        cover: json.cover,
         description: json.description,
-        tags: json.tags,
-        title: json.title,
+        gender: json.gender,
+        model: json.modelUrl,
+        category: json.category,
       },
+      tts: JSON.parse(json.tts),
+      touch: JSON.parse(json.touch),
+      model: json.model,
+      params: JSON.parse(json.params),
     };
 
     return { agent: await formatAgentSchema(agent ) };
