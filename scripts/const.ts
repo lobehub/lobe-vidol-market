@@ -22,3 +22,6 @@ export const indexPath = resolve(publicDir, "index.json");
 
 export const metaPath = resolve(root, "meta.json");
 export const meta = readJSONSync(metaPath);
+
+export const githubHomepage = 'https://github.com/lobehub/lobe-vidol-market';
+

@@ -11,3 +11,23 @@ export const checkDir = (dirpath) => {
 
 export const checkJSON = (file: Dirent) =>
   file.isFile() && file.name?.endsWith(".json");
+
+
+export const checkHeader = (line: string) => {
+  const header = [
+    '### systemRole',
+    '### agentId',
+    '### avatar',
+      '### cover',
+    '### name',
+    '### description',
+      '### model',
+    '### tags',
+    '### locale',
+  ];
+  let check = false;
+  header.forEach((item) => {
+    if (line.startsWith(item)) check = true;
+  });
+  return check;
+};
