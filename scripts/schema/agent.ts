@@ -78,7 +78,7 @@ export const MetaSchema = z.object({
 
 export const LLMParams =  z.object({
   frequency_penalty: z.number().default(0),
-  max_tokens: z.number(),
+  max_tokens: z.number().optional(),
   presence_penalty: z.number().default(0),
   temperature: z.number().default(0.6),
   top_p: z.number().default(1),
