@@ -234,6 +234,7 @@ class AutoSubmit {
       systemRole: json.systemRole,
       homepage: data.user.html_url,
       agentId: kebabCase(json.agentId),
+      greeting: json.greeting,
       meta: {
         name: json.name,
         avatar: json.avatar,
@@ -242,6 +243,7 @@ class AutoSubmit {
         gender: json.gender,
         model: json.modelUrl,
         category: json.category,
+        readme: json.readme,
       },
       tts: JSON.parse(json.tts),
       touch: JSON.parse(json.touch),

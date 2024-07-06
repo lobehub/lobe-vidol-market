@@ -30,8 +30,6 @@ export const checkHeader = (line: string) => {
     '### tts',
     '### touch',
     '### params',
-
-
   ];
   let check = false;
   header.forEach((item) => {
