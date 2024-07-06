@@ -233,7 +233,7 @@ class AutoSubmit {
       author: data.user.login,
       systemRole: json.systemRole,
       homepage: data.user.html_url,
-      agentId: kebabCase(json.identifier),
+      agentId: kebabCase(json.agentId),
       meta: {
         name: json.name,
         avatar: json.avatar,
