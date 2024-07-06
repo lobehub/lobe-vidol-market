@@ -53,7 +53,7 @@ class AutoSubmit {
 
     const { agent } = await this.formatIssue(issue);
     const comment = this.genCommentMessage(agent);
-    const agentName = agent.identifier;
+    const agentName = agent.agentId;
 
     const fileName = `${agentName}.json`;
     const filePath = resolve(agentsDir, fileName);
@@ -113,21 +113,21 @@ class AutoSubmit {
     consola.info('Push agent');
 
     // i18n
-    execSync('bun run format');
-    consola.info('Generate i18n file');
+    // execSync('bun run format');
+    // consola.info('Generate i18n file');
 
     // prettier
-    execSync(`echo "module.exports = require('@lobehub/lint').prettier;" >> .prettierrc.cjs`);
-    execSync('bun run prettier');
-    consola.info('Prettier');
-
-    // commit
-    execSync('git add -A');
-    execSync(
-      `git commit -m "🤖 chore(auto-submit): Generate i18n for ${agentName} (#${this.issueNumber})"`,
-    );
-    execSync(`git push origin agent/${agentName}`);
-    consola.info('Push i18n');
+    // execSync(`echo "module.exports = require('@lobehub/lint').prettier;" >> .prettierrc.cjs`);
+    // execSync('bun run prettier');
+    // consola.info('Prettier');
+    //
+    // // commit
+    // execSync('git add -A');
+    // execSync(
+    //   `git commit -m "🤖 chore(auto-submit): Generate i18n for ${agentName} (#${this.issueNumber})"`,
+    // );
+    // execSync(`git push origin agent/${agentName}`);
+    // consola.info('Push i18n');
   }
 
   genCommentMessage(json) {
