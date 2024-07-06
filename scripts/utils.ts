@@ -18,12 +18,18 @@ export const checkHeader = (line: string) => {
     '### systemRole',
     '### agentId',
     '### avatar',
-      '### cover',
+    '### cover',
     '### name',
     '### description',
-      '### model',
-    '### tags',
-    '### locale',
+    '### modelUrl',
+    '### model',
+    '### gender',
+    '### category',
+    '### tts',
+    '### touch',
+    '### params',
+
+
   ];
   let check = false;
   header.forEach((item) => {
