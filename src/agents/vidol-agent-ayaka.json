@@ -22,7 +22,7 @@
     "voice": "zh-CN-XiaoyiNeural"
   },
   "touch": {
-    "header": [
+    "head": [
       {
         "emotion": "surprised",
         "text": "哎呀，你在做什么呢？"
