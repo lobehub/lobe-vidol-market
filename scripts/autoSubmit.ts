@@ -245,10 +245,10 @@ class AutoSubmit {
         category: json.category,
         readme: json.readme,
       },
-      tts: JSON.parse(json.tts),
-      touch: JSON.parse(json.touch),
+      tts: json.tts ? JSON.parse(json.tts): undefined,
+      touch: json.touch? JSON.parse(json.touch): undefined,
       model: json.model,
-      params: JSON.parse(json.params),
+      params: json.params? JSON.parse(json.params): undefined,
     };
 
     return { agent: await formatAgentSchema(agent ) };
