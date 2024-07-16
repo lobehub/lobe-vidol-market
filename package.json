@@ -17,15 +17,18 @@
     "submit": "bun scripts/autoSubmit.ts"
   },
   "devDependencies": {
+    "@octokit/rest": "^20",
     "@types/node": "^20.12.8",
     "consola": "^3.2.3",
-    "dotenv": "^16",
-    "@octokit/rest": "^20",
     "dayjs": "^1.11.11",
+    "dotenv": "^16",
     "fs-extra": "^11.2.0",
     "lodash-es": "^4.17.21",
     "typescript": "^5.4.5",
     "zod": "^3.23.6",
     "zod-to-json-schema": "^3.23.0"
+  },
+  "dependencies": {
+    "langchain": "0.1.37"
   }
 }
