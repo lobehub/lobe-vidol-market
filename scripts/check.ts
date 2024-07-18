@@ -1,10 +1,12 @@
 import { consola } from "consola";
-import dayjs from "dayjs";
 import { remark } from 'remark';
+import { format } from 'prettier';
+import { kebabCase } from 'lodash-es';
 import pangu from 'remark-pangu';
+import dayjs from "dayjs";
 
-import { VidolAgentSchema } from "./schema/agent";
-import { VidolDanceSchema } from "./schema/dance";
+import { VidolAgentSchema,VidolAgent } from "./schema/agent";
+import { VidolDanceSchema,VidolDance } from "./schema/dance";
 import { config, meta } from './const';
 /**
  * @description 格式化 agent schema
@@ -40,7 +42,7 @@ export const formatDanceSchema = (dance) => {
   return dance;
 };
 /**
- * @description 根据 locale 格式化 agent schema
+ * @description 根据 locale 处理 prompt
 */
 export const formatPrompt = async (prompt: string, locale: string) => {
   return locale === 'zh-CN'
@@ -48,8 +50,8 @@ export const formatPrompt = async (prompt: string, locale: string) => {
     : String(await remark().process(prompt));
 };
 
-export const formatAgentJSON = async (agent: LobeAgent, locale: string = config.entryLocale) => {
-  formatAndCheckSchema(agent);
+export const formatAgentJSON = async (agent: VidolAgent, locale: string = config.entryLocale) => {
+  formatAgentSchema(agent);
   agent.config.systemRole = await formatPrompt(agent.config.systemRole, locale);
 
   agent.config.systemRole = await format(agent.config.systemRole, { parser: 'markdown' });
@@ -58,4 +60,16 @@ export const formatAgentJSON = async (agent: LobeAgent, locale: string = config.
     agent.meta.tags = agent.meta.tags.map((tag) => kebabCase(tag));
   }
   return agent;
+};
+
+export const formatDanceJSON = async (dance: VidolDance, locale: string = config.entryLocale) => {
+  formatDanceSchema(dance);
+  dance.config.systemRole = await formatPrompt(dance.config.systemRole, locale);
+
+  dance.config.systemRole = await format(dance.config.systemRole, { parser: 'markdown' });
+  dance.identifier = kebabCase(dance.identifier);
+  if (dance?.meta?.tags?.length > 0) {
+    dance.meta.tags = dance.meta.tags.map((tag) => kebabCase(tag));
+  }
+  return dance;
 };
