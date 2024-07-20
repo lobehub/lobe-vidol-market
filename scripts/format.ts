@@ -5,7 +5,7 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { Parser } from "./Parser";
-import { formatAgentJSON, formatPrompt } from "./check";
+import { formatAgentJSON,formatDanceJSON, formatPrompt } from "./check";
 import { agentFiles, danceFiles, config, localesDir } from "./const";
 import { translateJSON } from "./i18n";
 import { checkJSON, getLocaleAgentFileName, split, writeJSON } from "./utils";
