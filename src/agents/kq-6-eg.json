@@ -1,0 +1,33 @@
+{
+  "author": "rdmclin2",
+  "systemRole": "xxxx",
+  "homepage": "https://github.com/rdmclin2",
+  "agentId": "kq-6-eg",
+  "greeting": "Hello there",
+  "meta": {
+    "name": "Custom Role",
+    "avatar": "https://r2.vidol.chat/files/2024/07/20/429f0682-174e-42cc-83b3-6e7c8bdff093.webp",
+    "cover": "https://r2.vidol.chat/files/2024/07/20/acb6723a-ccc8-4ec6-a06b-ac38fb076c09.webp",
+    "description": "This is a custom role",
+    "gender": "Female",
+    "model": "https://r2.vidol.chat/files/2024/07/20/94903c62-35dd-4647-8573-74838e509a00.vrm",
+    "category": "Anime",
+    "readme": ""
+  },
+  "tts": {
+    "engine": "edge",
+    "locale": "zh-CN",
+    "pitch": 1,
+    "speed": 1,
+    "voice": "zh-CN-XiaoxiaoNeural"
+  },
+  "model": "gpt-3.5-turbo",
+  "params": {
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "temperature": 0.6,
+    "top_p": 1
+  },
+  "schemaVersion": 1,
+  "createAt": "2024-07-20"
+}
