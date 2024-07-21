@@ -14,7 +14,8 @@
   "scripts": {
     "build": "bun scripts/build.ts",
     "test": "bun scripts/test.ts",
-    "submit": "bun scripts/autoSubmit.ts"
+    "submit": "bun scripts/autoSubmit.ts",
+    "format": "bun scripts/format.ts"
   },
   "devDependencies": {
     "@octokit/rest": "^20",
@@ -29,6 +30,9 @@
     "zod-to-json-schema": "^3.23.0"
   },
   "dependencies": {
-    "langchain": "0.1.37"
+    "langchain": "0.1.37",
+    "prettier": "^3.3.2",
+    "remark": "^15.0.1",
+    "remark-pangu": "^2.2.0"
   }
 }
