@@ -5,7 +5,7 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { Parser } from "./Parser";
-import { formatAgentJSON,formatDanceJSON, formatPrompt } from "./check";
+import { formatAgentJSON, formatDanceJSON, formatPrompt } from "./check";
 import { agentFiles, danceFiles, config, localesDir } from "./const";
 import { translateJSON } from "./i18n";
 import { checkJSON, getLocaleAgentFileName, split, writeJSON } from "./utils";
@@ -13,20 +13,20 @@ import { checkJSON, getLocaleAgentFileName, split, writeJSON } from "./utils";
 class Formatter {
   formatJSON = async (fileName: string) => {
     consola.start(fileName);
-
+    const agent = await formatAgentJSON(agent, defaultLocale);
+    const dance = await formatDanceJSON(dance, defaultLocale);
+    const content = agent || dance;
     let {
-      content: agent,
+      content,
       id,
       locale: defaultLocale,
     } = Parser.parseFile(fileName);
-
-    agent = await formatAgentJSON(agent, defaultLocale);
 
     // i18n workflow
     let rawData = {};
 
     for (const key of config.selectors) {
-      const rawValue = get(agent, key);
+      const rawValue = get(content, key);
       if (rawValue) set(rawData, key, rawValue);
     }
 
