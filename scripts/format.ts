@@ -13,14 +13,13 @@ import { checkJSON, getLocaleAgentFileName, split, writeJSON } from "./utils";
 class Formatter {
   formatJSON = async (fileName: string) => {
     consola.start(fileName);
-    const agent = await formatAgentJSON(agent, defaultLocale);
-    const dance = await formatDanceJSON(dance, defaultLocale);
-    const content = agent || dance;
     let {
       content,
       id,
       locale: defaultLocale,
     } = Parser.parseFile(fileName);
+
+    content = await formatAgentJSON(content, defaultLocale) || await formatDanceJSON(content, defaultLocale);
 
     // i18n workflow
     let rawData = {};
@@ -63,7 +62,12 @@ class Formatter {
   run = async () => {
     consola.start("Start format json content...");
 
-    for (const file of agents) {
+    for (const file of agentFiles) {
+      if (checkJSON(file)) {
+        await this.formatJSON(file.name);
+      }
+    }
+    for (const file of danceFiles) {
       if (checkJSON(file)) {
         await this.formatJSON(file.name);
       }
