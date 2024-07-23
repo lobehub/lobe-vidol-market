@@ -19,7 +19,7 @@ export const Parser = {
 
     let agent: VidolAgent = readJSONSync(agentsFilePath);
     let dance: VidolDance = readJSONSync(dancesFilePath);
-    let content = agent || dance;
-    return { content, id, locale };
+    let contentValue = agent || dance;
+    return { content:contentValue, id, locale };
   },
 };
