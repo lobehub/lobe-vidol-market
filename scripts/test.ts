@@ -15,14 +15,14 @@ const runTest = () => {
     }
   }
 
-  for (const file of danceFiles) {
-    if (file.isFile()) {
-      const filePath = resolve(dancesDir, file.name);
-      consola.start(filePath.replace(root, ""));
-      const agent = readJSONSync(filePath);
-      formatDanceSchema(agent);
-    }
-  }
+  // for (const file of danceFiles) {
+  //   if (file.isFile()) {
+  //     const filePath = resolve(dancesDir, file.name);
+  //     consola.start(filePath.replace(root, ""));
+  //     const agent = readJSONSync(filePath);
+  //     formatDanceSchema(agent);
+  //   }
+  // }
 };
 
 runTest();

@@ -15,11 +15,10 @@ export const Parser = {
     const { id, locale = config.entryLocale } = match.groups;
 
     const agentsFilePath = resolve(agentsDir, fileName);
-    const dancesFilePath = resolve(dancesDir, fileName);
+    // const dancesFilePath = resolve(dancesDir, fileName);
 
     let agent: VidolAgent = readJSONSync(agentsFilePath);
-    let dance: VidolDance = readJSONSync(dancesFilePath);
-    let contentValue = agent || dance;
-    return { content:contentValue, id, locale };
+    // let dance: VidolDance = readJSONSync(dancesFilePath);
+    return { content:agent, id, locale };
   },
 };

@@ -18,8 +18,8 @@ class Formatter {
       id,
       locale: defaultLocale,
     } = Parser.parseFile(fileName);
-
-    content = await formatAgentJSON(content, defaultLocale) || await formatDanceJSON(content, defaultLocale);
+    // await formatDanceJSON(content, defaultLocale)
+    content = await formatAgentJSON(content, defaultLocale);
 
     // i18n workflow
     let rawData = {};
@@ -67,11 +67,11 @@ class Formatter {
         await this.formatJSON(file.name);
       }
     }
-    for (const file of danceFiles) {
-      if (checkJSON(file)) {
-        await this.formatJSON(file.name);
-      }
-    }
+    // for (const file of danceFiles) {
+    //   if (checkJSON(file)) {
+    //     await this.formatJSON(file.name);
+    //   }
+    // }
   };
 }
 

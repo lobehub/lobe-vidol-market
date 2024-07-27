@@ -52,9 +52,10 @@ export const formatPrompt = async (prompt: string, locale: string) => {
 
 export const formatAgentJSON = async (agent: VidolAgent, locale: string = config.entryLocale) => {
   formatAgentSchema(agent);
-  agent.config.systemRole = await formatPrompt(agent.config.systemRole, locale);
+  consola.log('agent', agent);
+  agent.systemRole = await formatPrompt(agent.systemRole, locale);
 
-  agent.config.systemRole = await format(agent.config.systemRole, { parser: 'markdown' });
+  agent.systemRole = await format(agent.systemRole, { parser: 'markdown' });
   agent.identifier = kebabCase(agent.identifier);
   if (agent?.meta?.tags?.length > 0) {
     agent.meta.tags = agent.meta.tags.map((tag) => kebabCase(tag));
