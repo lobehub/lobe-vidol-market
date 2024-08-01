@@ -46,8 +46,8 @@ class Formatter {
           defaultLocale
         );
         if (translateResult) {
-          translateResult.config.systemRole = await formatPrompt(
-            translateResult.config.systemRole,
+          translateResult.systemRole = await formatPrompt(
+            translateResult.systemRole,
             config.outputLocales
           );
           writeJSON(localeFilePath, translateResult);
