@@ -1,4 +1,5 @@
 import { consola } from "consola";
+// markdown
 import { remark } from 'remark';
 import { format } from 'prettier';
 import { kebabCase } from 'lodash-es';
@@ -9,7 +10,7 @@ import { VidolAgentSchema,VidolAgent } from "./schema/agent";
 import { VidolDanceSchema,VidolDance } from "./schema/dance";
 import { config, meta } from './const';
 /**
- * @description 格式化 agent schema
+ * @description 格式化&校验 agent
  * **/ 
 export const formatAgentSchema = (agent) => {
   if (!agent.schemaVersion) agent.schemaVersion = meta.schemaVersion;
@@ -52,14 +53,14 @@ export const formatPrompt = async (prompt: string, locale: string) => {
 
 export const formatAgentJSON = async (agent: VidolAgent, locale: string = config.entryLocale) => {
   formatAgentSchema(agent);
-  consola.log('agent', agent);
   agent.systemRole = await formatPrompt(agent.systemRole, locale);
-
+  agent.greeting = await formatPrompt(agent.greeting, locale);
+  // agent.meta = await formatPrompt(agent.meta, locale);
+  // agent.touch = await formatPrompt(agent.touch, locale);
   agent.systemRole = await format(agent.systemRole, { parser: 'markdown' });
-  agent.identifier = kebabCase(agent.identifier);
-  if (agent?.meta?.tags?.length > 0) {
-    agent.meta.tags = agent.meta.tags.map((tag) => kebabCase(tag));
-  }
+  agent.greeting = await format(agent.greeting, { parser: 'markdown' });
+  // agent.meta = await format(agent.meta, { parser: 'markdown' });
+  // agent.touch = await format(agent.touch, { parser: 'markdown' });
   return agent;
 };
 

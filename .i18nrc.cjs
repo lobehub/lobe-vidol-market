@@ -11,7 +11,7 @@ module.exports = {
       return getDefaultExtension(locale);
     },
   },
-  selectors: ['meta.name','meta.readme','meta.description', 'systemRole','greeting','touch.head','touch.arm','touch.leg','touch.chest','touch.belly'],
+  selectors: ['systemRole','greeting','meta','meta.name','meta.readme','meta.description', 'touch.head','touch.arm','touch.leg','touch.chest','touch.belly'],
   // selectors: ['meta', 'systemRole', 'greeting', 'touch'],
   entryLocale: 'en-US',
   outputLocales: ['zh-CN', 'en-US'],

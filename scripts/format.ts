@@ -14,18 +14,22 @@ class Formatter {
   formatJSON = async (fileName: string) => {
     consola.start(fileName);
     let {
-      content,
+      content: agent,
       id,
       locale: defaultLocale,
     } = Parser.parseFile(fileName);
+    // consola.info('最初的模型', agent)
     // await formatDanceJSON(content, defaultLocale)
-    content = await formatAgentJSON(content, defaultLocale);
+    // TODO:这一步出了问题
+    agent = await formatAgentJSON(agent, defaultLocale);
+    // consola.info('格式化后模型', agent)
 
     // i18n workflow
     let rawData = {};
 
     for (const key of config.selectors) {
-      const rawValue = get(content, key);
+      const rawValue = get(agent, key);
+      // consola.info(`挽歌测试>>> ${key} ${rawValue}`);
       if (rawValue) set(rawData, key, rawValue);
     }
 
@@ -39,7 +43,7 @@ class Formatter {
         // TODO: localMode flat
         if (existsSync(localeFilePath)) continue;
 
-        consola.log("gen", id, `from [${defaultLocale}] to [${locale}]`);
+        consola.log("translating", id, `from [${defaultLocale}] to [${locale}]`);
         const translateResult = await translateJSON(
           rawData,
           locale,
