@@ -13,7 +13,7 @@ module.exports = {
   },
   selectors: ['systemRole','greeting','meta','meta.name','meta.readme','meta.description', 'touch.head','touch.arm','touch.leg','touch.chest','touch.belly'],
   // selectors: ['meta', 'systemRole', 'greeting', 'touch'],
-  entryLocale: 'en-US',
+  entryLocale: 'zh-CN',
   outputLocales: ['zh-CN', 'en-US'],
   modelName: 'gpt-3.5-turbo-0125',
 };
