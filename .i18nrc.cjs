@@ -11,8 +11,10 @@ module.exports = {
       return getDefaultExtension(locale);
     },
   },
-  selectors: ['systemRole','greeting','meta','meta.name','meta.readme','meta.description', 'touch.head','touch.arm','touch.leg','touch.chest','touch.belly'],
-  // selectors: ['meta', 'systemRole', 'greeting', 'touch'],
+  // agent translate key
+  // selectors: ['systemRole','greeting','meta.name','meta.readme','meta.description', 'touch.head','touch.arm','touch.leg','touch.chest','touch.belly'],
+  // dance translate key
+  selectors: ['name', 'readme'],
   entryLocale: 'zh-CN',
   outputLocales: ['zh-CN', 'en-US'],
   modelName: 'gpt-3.5-turbo-0125',

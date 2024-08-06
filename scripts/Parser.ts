@@ -13,12 +13,12 @@ export const Parser = {
 
     const match = regexp.exec(fileName.replace(".json", ""));
     const { id, locale = config.entryLocale } = match.groups;
-
-    const agentsFilePath = resolve(agentsDir, fileName);
-    // const dancesFilePath = resolve(dancesDir, fileName);
-
-    let agent: VidolAgent = readJSONSync(agentsFilePath);
-    // let dance: VidolDance = readJSONSync(dancesFilePath);
+    // agent file path
+    // const agentsFilePath = resolve(agentsDir, fileName);
+    // let agent: VidolAgent = readJSONSync(agentsFilePath);
+    // dance file path
+    const dancesFilePath = resolve(dancesDir, fileName);
+    let agent: VidolDance = readJSONSync(dancesFilePath);
     return { content:agent, id, locale };
   },
 };

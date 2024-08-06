@@ -18,18 +18,16 @@ class Formatter {
       id,
       locale: defaultLocale,
     } = Parser.parseFile(fileName);
-    // consola.info('最初的模型', agent)
-    // await formatDanceJSON(content, defaultLocale)
-    // TODO:这一步出了问题
-    agent = await formatAgentJSON(agent, defaultLocale);
-    // consola.info('格式化后模型', agent)
+    // dance format
+    agent = await formatDanceJSON(agent, defaultLocale);
+    // agent format
+    // agent = await formatAgentJSON(agent, defaultLocale);
 
     // i18n workflow
     let rawData = {};
 
     for (const key of config.selectors) {
       const rawValue = get(agent, key);
-      // consola.info(`挽歌测试>>> ${key} ${rawValue}`);
       if (rawValue) set(rawData, key, rawValue);
     }
 
@@ -65,17 +63,19 @@ class Formatter {
 
   run = async () => {
     consola.start("Start format json content...");
-
-    for (const file of agentFiles) {
-      if (checkJSON(file)) {
-        await this.formatJSON(file.name);
-      }
-    }
-    // for (const file of danceFiles) {
+    // foreach & tanslate agentFiles
+    // for (const file of agentFiles) {
     //   if (checkJSON(file)) {
     //     await this.formatJSON(file.name);
     //   }
     // }
+
+    // foreach & tanslate danceFiles
+    for (const file of danceFiles) {
+      if (checkJSON(file)) {
+        await this.formatJSON(file.name);
+      }
+    }
   };
 }
 

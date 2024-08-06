@@ -6,6 +6,7 @@ import { formatAgentSchema, formatDanceSchema } from "./check";
 import { agentFiles, agentsDir, root, danceFiles, dancesDir } from "./const";
 
 const runTest = () => {
+  // test agent
   for (const file of agentFiles) {
     if (file.isFile()) {
       const filePath = resolve(agentsDir, file.name);
@@ -14,15 +15,15 @@ const runTest = () => {
       formatAgentSchema(agent);
     }
   }
-
-  // for (const file of danceFiles) {
-  //   if (file.isFile()) {
-  //     const filePath = resolve(dancesDir, file.name);
-  //     consola.start(filePath.replace(root, ""));
-  //     const agent = readJSONSync(filePath);
-  //     formatDanceSchema(agent);
-  //   }
-  // }
+  // test agent
+  for (const file of danceFiles) {
+    if (file.isFile()) {
+      const filePath = resolve(dancesDir, file.name);
+      consola.start(filePath.replace(root, ""));
+      const agent = readJSONSync(filePath);
+      formatDanceSchema(agent);
+    }
+  }
 };
 
 runTest();

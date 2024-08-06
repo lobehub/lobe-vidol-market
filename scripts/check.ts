@@ -19,9 +19,9 @@ export const formatAgentSchema = (agent) => {
   const result = VidolAgentSchema.safeParse(agent);
 
   if (result.success) {
-    consola.success(`schema check pass`);
+    consola.success(`agent schema check pass`);
   } else {
-    consola.error(`schema check fail`);
+    consola.error(`agent schema check fail`);
     throw new Error((result as any).error);
   }
   return agent;
@@ -31,13 +31,14 @@ export const formatAgentSchema = (agent) => {
  * **/ 
 export const formatDanceSchema = (dance) => {
   if (!dance.schemaVersion) dance.schemaVersion = meta.schemaVersion;
+  if (!dance.createAt) dance.createAt = dayjs().format('YYYY-MM-DD');
 
   const result = VidolDanceSchema.safeParse(dance);
 
   if (result.success) {
-    consola.success(`schema check pass`);
+    consola.success(`dance schema check pass`);
   } else {
-    consola.error(`schema check fail`);
+    consola.error(`dance schema check fail`);
     throw new Error((result as any).error);
   }
   return dance;
@@ -55,23 +56,16 @@ export const formatAgentJSON = async (agent: VidolAgent, locale: string = config
   formatAgentSchema(agent);
   agent.systemRole = await formatPrompt(agent.systemRole, locale);
   agent.greeting = await formatPrompt(agent.greeting, locale);
-  // agent.meta = await formatPrompt(agent.meta, locale);
-  // agent.touch = await formatPrompt(agent.touch, locale);
   agent.systemRole = await format(agent.systemRole, { parser: 'markdown' });
   agent.greeting = await format(agent.greeting, { parser: 'markdown' });
-  // agent.meta = await format(agent.meta, { parser: 'markdown' });
-  // agent.touch = await format(agent.touch, { parser: 'markdown' });
   return agent;
 };
 
 export const formatDanceJSON = async (dance: VidolDance, locale: string = config.entryLocale) => {
   formatDanceSchema(dance);
-  dance.config.systemRole = await formatPrompt(dance.config.systemRole, locale);
-
-  dance.config.systemRole = await format(dance.config.systemRole, { parser: 'markdown' });
-  dance.identifier = kebabCase(dance.identifier);
-  if (dance?.meta?.tags?.length > 0) {
-    dance.meta.tags = dance.meta.tags.map((tag) => kebabCase(tag));
-  }
+  dance.name = await formatPrompt(dance.name, locale);
+  dance.readme = await formatPrompt(dance.readme, locale);
+  dance.name = await format(dance.name, { parser: 'markdown' });
+  dance.readme = await format(dance.readme, { parser: 'markdown' });
   return dance;
 };
