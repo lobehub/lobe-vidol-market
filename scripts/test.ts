@@ -6,6 +6,7 @@ import { formatAgentSchema, formatDanceSchema } from "./check";
 import { agentFiles, agentsDir, root, danceFiles, dancesDir } from "./const";
 
 const runTest = () => {
+  // test agent
   for (const file of agentFiles) {
     if (file.isFile()) {
       const filePath = resolve(agentsDir, file.name);
@@ -14,7 +15,7 @@ const runTest = () => {
       formatAgentSchema(agent);
     }
   }
-
+  // test agent
   for (const file of danceFiles) {
     if (file.isFile()) {
       const filePath = resolve(dancesDir, file.name);
