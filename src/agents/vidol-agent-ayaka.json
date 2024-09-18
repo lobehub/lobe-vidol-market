@@ -24,32 +24,37 @@
   "touch": {
     "head": [
       {
-        "emotion": "surprised",
-        "text": "哎呀，你在做什么呢？"
+        "expression": "surprised",
+        "text": "哎呀，你在做什么呢？",
+        "motion": "femaleangry"
       }
     ],
     "arm": [
       {
-        "emotion": "happy",
-        "text": "呵呵，需要帮忙吗？"
+        "expression": "happy",
+        "text": "呵呵，需要帮忙吗？",
+        "motion": "femalehappy"
       }
     ],
     "leg": [
       {
-        "emotion": "neutral",
-        "text": "这是一种不太合适的触碰方式。"
+        "expression": "neutral",
+        "text": "这是一种不太合适的触碰方式。",
+        "motion": "femaleangry"
       }
     ],
     "chest": [
       {
-        "emotion": "angry",
-        "text": "请保持距离，这不是礼貌的行为。"
+        "expression": "angry",
+        "text": "请保持距离，这不是礼貌的行为。",
+        "motion": "femaleangry"
       }
     ],
     "belly": [
       {
-        "emotion": "surprised",
-        "text": "噢！那里很敏感。"
+        "expression": "surprised",
+        "text": "噢！那里很敏感。",
+        "motion": "femaleangry"
       }
     ]
   },

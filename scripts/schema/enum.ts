@@ -1,4 +1,4 @@
-import {z} from "zod";
+import { z } from "zod";
 
 /**
  * Category Enum, 当前包括 Anime, Game, Realistic, VTuber, Book, History, Movie, Animal, Vroid, Other
@@ -13,16 +13,12 @@ export const CategoryEnum = z.enum([
   "Movie",
   "Animal",
   "Vroid",
-   "Other"
+  "Other",
 ]);
 
-export const GenderEnum = z.enum([
-  "Male",
-  "Female",
-  "Other"
-]);
+export const GenderEnum = z.enum(["Male", "Female", "Other"]);
 
-export const EmotionEnum = z.enum([
+export const ExpressionEnum = z.enum([
   "happy",
   "angry",
   "sad",
