@@ -13,6 +13,7 @@
     "pitch": 1
   },
   "touch": {
+    "enable": true,
     "head": [
       {
         "expression": "neutral",
