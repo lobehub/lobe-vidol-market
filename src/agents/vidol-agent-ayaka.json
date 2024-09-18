@@ -22,6 +22,7 @@
     "voice": "zh-CN-XiaoyiNeural"
   },
   "touch": {
+    "enable": true,
     "head": [
       {
         "expression": "surprised",
