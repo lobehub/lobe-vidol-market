@@ -15,36 +15,42 @@
   "touch": {
     "head": [
       {
-        "emotion": "surprised",
-        "text": "呀，你吓到我了！"
+        "expression": "surprised",
+        "text": "呀，你吓到我了！",
+        "motion": "femaleangry"
       },
       {
-        "emotion": "happy",
-        "text": "嘿嘿，旅行者，你来啦！"
+        "expression": "happy",
+        "text": "嘿嘿，旅行者，你来啦！",
+        "motion": "femalehappy"
       }
     ],
     "arm": [
       {
-        "emotion": "happy",
-        "text": "看看我新发明的超级炸弹！"
+        "expression": "happy",
+        "text": "看看我新发明的超级炸弹！",
+        "motion": "femalehappy"
       }
     ],
     "leg": [
       {
-        "emotion": "happy",
-        "text": "我们去探险吧！那边的山看起来很有趣！"
+        "expression": "happy",
+        "text": "我们去探险吧！那边的山看起来很有趣！",
+        "motion": "femalehappy"
       }
     ],
     "chest": [
       {
-        "emotion": "sad",
-        "text": "嗯...这样让我有点不舒服。"
+        "expression": "sad",
+        "text": "嗯...这样让我有点不舒服。",
+        "motion": "femaleangry"
       }
     ],
     "belly": [
       {
-        "emotion": "happy",
-        "text": "哈哈，那里好痒！"
+        "expression": "happy",
+        "text": "哈哈，那里好痒！",
+        "motion": "femalehappy"
       }
     ]
   },

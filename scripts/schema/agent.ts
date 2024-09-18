@@ -1,19 +1,19 @@
-import {z} from "zod";
-import {CategoryEnum, GenderEnum, EmotionEnum} from "./enum";
+import { z } from "zod";
+import { CategoryEnum, GenderEnum, ExpressionEnum } from "./enum";
 
 export const TouchActionSchema = z.object({
-    emotion: EmotionEnum.optional(),
-    // motion: z.string().optional(),
-    text: z.string(),
+  expression: ExpressionEnum.optional(),
+  motion: z.string().optional(),
+  text: z.string(),
 });
 
 export const TouchActionConfigSchema = z.object({
-    head: z.array(TouchActionSchema).optional(),
-    arm: z.array(TouchActionSchema).optional(),
-    leg: z.array(TouchActionSchema).optional(),
-    chest: z.array(TouchActionSchema).optional(),
-    belly: z.array(TouchActionSchema).optional(),
-})
+  head: z.array(TouchActionSchema).optional(),
+  arm: z.array(TouchActionSchema).optional(),
+  leg: z.array(TouchActionSchema).optional(),
+  chest: z.array(TouchActionSchema).optional(),
+  belly: z.array(TouchActionSchema).optional(),
+});
 
 /**
  * TTS Schema
@@ -76,13 +76,13 @@ export const MetaSchema = z.object({
   readme: z.string().optional(),
 });
 
-export const LLMParams =  z.object({
+export const LLMParams = z.object({
   frequency_penalty: z.number().default(0),
   max_tokens: z.number().optional(),
   presence_penalty: z.number().default(0),
   temperature: z.number().default(0.6),
   top_p: z.number().default(1),
-})
+});
 
 /**
  * Agent Schema
