@@ -7,7 +7,7 @@ import { formatDanceSchema } from "../check";
 import { dancesDir } from "../const";
 import { AutoSubmitBase } from "./AutoSubmitBase";
 
-class AutoSubmitDance extends AutoSubmitBase {
+export class AutoSubmitDance extends AutoSubmitBase {
   protected GENERATE_LABEL = "💃 Dance PR";
   protected SUCCESS_LABEL = "✅ Auto Check Pass";
   protected ERROR_LABEL = "🚨 Auto Check Fail";
@@ -39,14 +39,14 @@ class AutoSubmitDance extends AutoSubmitBase {
       [
         comment,
         `[@${dance.author}](${dance.homepage}) (resolve #${this.issueNumber})`,
-      ].join("\n"),
+      ].join("\n")
     );
     consola.success("Create PR");
 
     await this.addLabels(this.SUCCESS_LABEL);
   }
 
-  async formatIssue(data) {
+ async formatIssue(data) {
     const json = this.markdownToJson(data.body) as any;
     const dance = {
       danceId: kebabCase(json.danceId),
@@ -59,6 +59,8 @@ class AutoSubmitDance extends AutoSubmitBase {
       thumb: json.thumb,
       readme: json.readme,
     };
+
+    consola.info('dance', dance);
 
     return { dance: await formatDanceSchema(dance) };
   }
