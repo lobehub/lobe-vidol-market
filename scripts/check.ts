@@ -7,7 +7,7 @@ import { VidolDanceSchema } from "./schema/dance";
 
 export const formatAgentSchema = (agent) => {
   if (!agent.schemaVersion) agent.schemaVersion = meta.schemaVersion;
-  if (!agent.createAt) agent.createAt = dayjs().format('YYYY-MM-DD');
+  if (!agent.createAt) agent.createAt = dayjs().format("YYYY-MM-DD");
 
   const result = VidolAgentSchema.safeParse(agent);
 
@@ -22,6 +22,7 @@ export const formatAgentSchema = (agent) => {
 
 export const formatDanceSchema = (dance) => {
   if (!dance.schemaVersion) dance.schemaVersion = meta.schemaVersion;
+  if (!dance.createAt) dance.createAt = dayjs().format("YYYY-MM-DD");
 
   const result = VidolDanceSchema.safeParse(dance);
 
