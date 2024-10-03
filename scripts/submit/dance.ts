@@ -60,8 +60,6 @@ export class AutoSubmitDance extends AutoSubmitBase {
       readme: json.readme,
     };
 
-    consola.info('dance', dance, data.body);
-
     return { dance: await formatDanceSchema(dance) };
   }
 
