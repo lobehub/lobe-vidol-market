@@ -1,4 +1,4 @@
-name: Auto Submit
+name: Auto Submit Agent
 
 on:
   issues:
@@ -17,7 +17,7 @@ jobs:
       - name: Install deps
         run: bun i
 
-      - name: Auto submit
+      - name: Auto submit agent
         run: bun run submitAgent
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
