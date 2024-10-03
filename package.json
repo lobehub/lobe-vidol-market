@@ -14,7 +14,8 @@
   "scripts": {
     "build": "bun scripts/build.ts",
     "test": "bun scripts/test.ts",
-    "submit": "bun scripts/autoSubmit.ts"
+    "submitAgent": "bun scripts/submit/agent.ts",
+    "submitDance": "bun scripts/submit/dance.ts"
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
