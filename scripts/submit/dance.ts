@@ -1,14 +1,10 @@
-import { Octokit } from "@octokit/rest";
 import { consola } from "consola";
 import "dotenv/config";
 import { kebabCase } from "lodash-es";
-import { execSync } from "node:child_process";
-import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { formatDanceSchema } from "../check";
-import { dancesDir, githubHomepage } from "../const";
-import { checkHeader, writeJSON } from "../utils";
+import { dancesDir } from "../const";
 import { AutoSubmitBase } from "./AutoSubmitBase";
 
 class AutoSubmitDance extends AutoSubmitBase {
@@ -43,7 +39,7 @@ class AutoSubmitDance extends AutoSubmitBase {
       [
         comment,
         `[@${dance.author}](${dance.homepage}) (resolve #${this.issueNumber})`,
-      ].join("\n")
+      ].join("\n"),
     );
     consola.success("Create PR");
 
