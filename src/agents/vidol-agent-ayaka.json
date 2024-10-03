@@ -27,35 +27,35 @@
       {
         "expression": "surprised",
         "text": "哎呀，你在做什么呢？",
-        "motion": "femaleangry"
+        "motion": "female_angry"
       }
     ],
     "arm": [
       {
         "expression": "happy",
         "text": "呵呵，需要帮忙吗？",
-        "motion": "femalehappy"
+        "motion": "female_happy"
       }
     ],
     "leg": [
       {
         "expression": "neutral",
         "text": "这是一种不太合适的触碰方式。",
-        "motion": "femaleangry"
+        "motion": "female_angry"
       }
     ],
     "chest": [
       {
         "expression": "angry",
         "text": "请保持距离，这不是礼貌的行为。",
-        "motion": "femaleangry"
+        "motion": "female_angry"
       }
     ],
     "belly": [
       {
         "expression": "surprised",
         "text": "噢！那里很敏感。",
-        "motion": "femaleangry"
+        "motion": "female_angry"
       }
     ]
   },
