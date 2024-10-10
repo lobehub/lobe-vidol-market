@@ -1,0 +1,13 @@
+{
+  "danceId": "evo-addiction",
+  "name": "[A]ddiction",
+  "author": "rdmclin2",
+  "homepage": "https://github.com/rdmclin2",
+  "src": "https://r2.vidol.chat/files/2024/10/11/3bf48220-35d4-4098-9546-420bfa08d36c.vmd",
+  "audio": "https://r2.vidol.chat/files/2024/10/11/4c4d8a74-317d-41f4-86a4-bd2a7329e0f7.wav",
+  "cover": "https://r2.vidol.chat/files/2024/10/11/43f696aa-c47c-4257-b92b-ce77f66b3151.webp",
+  "thumb": "https://r2.vidol.chat/files/2024/10/11/0f7a0d75-1ab7-4d6c-bce8-e12af44d59f8.webp",
+  "readme": "MikuMikuDance用モーションデータ\r\n[A]ddiction\r\n\r\n○配布元動画\r\n【MikuMikuDance】[A]ddiction【モーショントレース】\r\nhttp://www.nicovideo.jp/watch/sm32142474\r\n\r\n○トレース元動画：足太ぺんたさん\r\n【足太ぺんた】[A]ddiction 踊ってみた【オリジナル振付】\r\nhttp://www.nicovideo.jp/watch/sm30167510\r\n\r\n○オリジナル曲：Gigaさん Reolさん EVO+さん\r\n[A]ddiction / GigaReol×EVO+\r\nhttp://www.nicovideo.jp/watch/sm27594954\r\n\r\n\r\n■使用条件\r\n\r\nデータを自分の責任で改造して使ってもかまいません。\r\n自分で責任をとれる限り、改造したデータは配布してかまいません。元データの再配布はご遠慮ください。 \r\nただし配布する場合、必ず同じ条件（非営利・改造可・改造データ再配布可）で、改造の履歴を記述して配布してください。\r\nご利用は自己責任で権利者の方々の迷惑にならないよう常識の範囲内でお願いします。\r\n商業利用は禁止です。\r\n\r\n■免責事項\r\n\r\nこのモーションデータを使用したことによって生じたすべての障害・損害・不具合等に関しては、\r\n私と私の関係者および私の所属するいかなる団体・組織とも、一切の責任を負いません。\r\n各自の責任においてご使用ください。\r\n\r\n■説明・注意点\r\n\r\nLat式ミクVer2.3 Whiteを利用して作成しております。\r\n上半身2ボーンが必須です。\r\n\r\n・[A]ddiction_Lat式.vmd\r\n・[A]ddiction_Tda式.vmd\r\n・[A]ddiction_男性用.vmd\r\n・[A]ddiction_どっと式_PVキット用.vmd\r\n\r\nモーションの出だしはオリジナル曲にの方に合わせてあります。\r\n\r\nTda式ミク用に調整したモーションも同梱してます。\r\n男性用モーションは肩幅が広く腕の長いモデルに合わせてあります。\r\n移動距離も1.2倍になってますのでキャラによっては動きすぎるかもしれません。\r\n\r\nミクより体の大きなモデルに読み込む場合\r\nモデルにモーションを読み込んだ後\r\nモデルの大きさに応じて移動距離を調整してください。\r\n「フレーム編集」→「フレーム位置角度補正」\r\n\r\nモデルによっては目の動き",
+  "schemaVersion": 1,
+  "createAt": "2024-10-10"
+}
