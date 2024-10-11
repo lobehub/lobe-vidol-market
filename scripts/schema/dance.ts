@@ -25,7 +25,7 @@ export const VidolDanceSchema = z.object({
    */
   audio: z.string(),
   /**
-   * 封面图片地址，推荐尺寸 320 * 480 倍数
+   * 封面图片地址，推荐尺寸 320 * 320 倍数
    */
   cover: z.string(),
   /**
@@ -44,6 +44,10 @@ export const VidolDanceSchema = z.object({
    * schema 版本
    */
   schemaVersion: z.number(),
+  /**
+   * 镜头文件地址
+   */
+  camera: z.string().optional(),
 });
 
 export type VidolDance = z.infer<typeof VidolDanceSchema>;

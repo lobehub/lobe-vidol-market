@@ -6,5 +6,6 @@
   "audio": "audio file path",
   "cover": "cover file path",
   "thumb": "thumb file path",
-  "readme": "readme"
+  "readme": "readme",
+  "camera": "camera file path"
 }

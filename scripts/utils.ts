@@ -33,6 +33,7 @@ export const checkHeader = (line: string) => {
     "### audio",
     "### src",
     "### thumb",
+    "### camera",
   ];
   let check = false;
   header.forEach((item) => {
