@@ -46,7 +46,7 @@ export class AutoSubmitDance extends AutoSubmitBase {
     await this.addLabels(this.SUCCESS_LABEL);
   }
 
- async formatIssue(data) {
+  async formatIssue(data) {
     const json = this.markdownToJson(data.body) as any;
     const dance = {
       danceId: kebabCase(json.danceId),
@@ -58,6 +58,7 @@ export class AutoSubmitDance extends AutoSubmitBase {
       cover: json.cover,
       thumb: json.thumb,
       readme: json.readme,
+      camera: json.camera, // 添加 camera 字段
     };
 
     return { dance: await formatDanceSchema(dance) };
