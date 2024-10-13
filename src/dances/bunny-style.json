@@ -1,0 +1,14 @@
+{
+  "danceId": "bunny-style",
+  "name": "T-ARA - Bunny Style",
+  "author": "rdmclin2",
+  "homepage": "https://github.com/rdmclin2",
+  "src": "https://r2.vidol.chat/files/2024/10/13/c54452b0-eaec-48dc-b1dc-35a2654e8867.vmd",
+  "audio": "https://r2.vidol.chat/files/2024/10/13/4525b09f-0d0c-4940-a7e3-ce7fe981d2cc.wav",
+  "cover": "https://r2.vidol.chat/files/2024/10/13/f5e1458e-1801-450b-b2f9-89fd956d2ca6.webp",
+  "thumb": "https://r2.vidol.chat/files/2024/10/13/be14f970-89c6-40cf-9a0f-bb733f94b930.webp",
+  "readme": "Thank you very much for your support!\r\nI hope you will enjoy this motion!\r\n\r\n-----------------------------------------------\r\n\r\nRules:\r\n- DO NOT redistribute this motion!\r\n- DO NOT resell this motion!\r\n- DO NOT claim as your own!\r\n- Credit me! Put my name {NatsumiSan} in your video description or add link to my original video!\r\n- R16, R18, etc. are allowed!\r\n- Enjoy! <3\r\n\r\n-----------------------------------------------\r\n\r\nYour model must have the following bones\r\nfor the motion to work correctly:\r\n\r\n右肩P - shoulderP_R\r\n左肩P - shoulderP_L\r\n右腕捩 - arm twist_R\r\n左腕捩 - arm twist_L\r\n右手捩 - wrist twist_R\r\n左手捩 - wrist twist_L\r\n上半身2 - upper-body2\r\n\r\nAdvice:\r\nFor correct work of motion, SemiStandart Bones are necessarily. Please be sure that your models have SemiStandart Bones.\r\nUse this tutorial:\r\nhttps://www.deviantart.com/chilkad/art/MMD-Tutorial-SemiStandard-Bones-for-PMD-Editor-296008375\r\n\r\nAlso look at this tutorial to fix hands:\r\nhttps://youtu.be/vpmrE7GpxyQ\r\n\r\n-----------------------------------------------\r\n\r\nJuly 2020 ~Nat",
+  "camera": "https://r2.vidol.chat/files/2024/10/13/4e046787-6575-4a33-874a-1cb65b96e162.vmd",
+  "schemaVersion": 1,
+  "createAt": "2024-10-13"
+}
