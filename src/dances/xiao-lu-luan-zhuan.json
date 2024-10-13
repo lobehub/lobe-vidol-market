@@ -1,0 +1,14 @@
+{
+  "danceId": "xiao-lu-luan-zhuan",
+  "name": "Ryan.B & D-DAY - I’m Feeling Good",
+  "author": "rdmclin2",
+  "homepage": "https://github.com/rdmclin2",
+  "src": "https://r2.vidol.chat/files/2024/10/13/e003a142-798a-4466-8f22-ab02f6f4409d.vmd",
+  "audio": "https://r2.vidol.chat/files/2024/10/13/cce619c3-0007-4857-8e1e-f161f30e3e0d.wav",
+  "cover": "https://r2.vidol.chat/files/2024/10/13/d504b1c1-e8d4-461b-aa05-43247d63b403.webp",
+  "thumb": "https://r2.vidol.chat/files/2024/10/13/add4b36a-5d0b-4c38-8254-d29db1f621aa.webp",
+  "readme": "Thank you very much for your support!\r\nI hope you will enjoy this motion!\r\n\r\n-----------------------------------------------\r\n\r\nRules:\r\n- DO NOT redistribute this motion!\r\n- DO NOT resell this motion!\r\n- DO NOT claim as your own!\r\n- Credit me! Put my name {NatsumiSan} in your video description or add link to my original video!\r\n- R16, R18, etc. are allowed!\r\n- Enjoy! <3\r\n\r\n-----------------------------------------------\r\n\r\nYour model must have the following bones\r\nfor the motion to work correctly:\r\n\r\n右肩P - shoulderP_R\r\n左肩P - shoulderP_L\r\n右腕捩 - arm twist_R\r\n左腕捩 - arm twist_L\r\n右手捩 - wrist twist_R\r\n左手捩 - wrist twist_L\r\n上半身2 - upper-body2\r\n\r\nAdvice:\r\nFor correct work of motion, SemiStandart Bones are necessarily. Please be sure that your models have SemiStandart Bones.\r\nUse this tutorial:\r\nhttps://www.deviantart.com/chilkad/art/MMD-Tutorial-SemiStandard-Bones-for-PMD-Editor-296008375\r\n\r\nAlso look at this tutorial to fix hands:\r\nhttps://youtu.be/vpmrE7GpxyQ\r\n\r\n-----------------------------------------------\r\n\r\nJune 2020 ~Nat",
+  "camera": "https://r2.vidol.chat/files/2024/10/13/cd894f92-6160-480f-bb26-0aace241b372.vmd",
+  "schemaVersion": 1,
+  "createAt": "2024-10-13"
+}
