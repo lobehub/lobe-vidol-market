@@ -1,0 +1,14 @@
+{
+  "danceId": "number-9",
+  "name": "T-ARA - Number 9",
+  "author": "rdmclin2",
+  "homepage": "https://github.com/rdmclin2",
+  "src": "https://r2.vidol.chat/files/2024/10/13/cda1191d-3010-4683-99e9-da052999875d.vmd",
+  "audio": "https://r2.vidol.chat/files/2024/10/13/1594b206-1e4d-47d1-90e7-17f5ebef81ae.wav",
+  "cover": "https://r2.vidol.chat/files/2024/10/13/722ee528-4115-46d9-a105-d5419d4baf00.webp",
+  "thumb": "https://r2.vidol.chat/files/2024/10/13/d800d190-8d2a-4789-aa75-0da9c5681dc3.webp",
+  "readme": "Thank you very much for your support!\r\nI hope you will enjoy this motion!\r\n\r\n-----------------------------------------------\r\n\r\nRules:\r\n- DO NOT redistribute this motion!\r\n- DO NOT resell this motion!\r\n- DO NOT claim as your own!\r\n- Credit me! Put my name {NatsumiSan} in your video description or add link to my original video!\r\n- R16, R18, etc. are allowed!\r\n- Enjoy! <3\r\n\r\n-----------------------------------------------\r\n\r\nYour model must have the following bones\r\nfor the motion to work correctly:\r\n\r\n右肩P - shoulderP_R\r\n左肩P - shoulderP_L\r\n右腕捩 - arm twist_R\r\n左腕捩 - arm twist_L\r\n右手捩 - wrist twist_R\r\n左手捩 - wrist twist_L\r\n上半身2 - upper-body2\r\n\r\nAdvice:\r\nFor correct work of motion, SemiStandart Bones are necessarily. Please be sure that your models have SemiStandart Bones.\r\nUse this tutorial:\r\nhttps://www.deviantart.com/chilkad/art/MMD-Tutorial-SemiStandard-Bones-for-PMD-Editor-296008375\r\n\r\nAlso look at this tutorial to fix \r\n\r\nBy http://www.t-ara-official.com/, Fair use, https://en.wikipedia.org/w/index.php?curid=40900037",
+  "camera": "https://r2.vidol.chat/files/2024/10/13/d88d7632-44e8-444d-938d-68ed108f9fa9.vmd",
+  "schemaVersion": 1,
+  "createAt": "2024-10-13"
+}
