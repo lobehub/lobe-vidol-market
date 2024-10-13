@@ -1,0 +1,14 @@
+{
+  "danceId": "tomboy",
+  "name": "(G)I-DLE - TOMBOY",
+  "author": "rdmclin2",
+  "homepage": "https://github.com/rdmclin2",
+  "src": "https://r2.vidol.chat/files/2024/10/13/e858584e-0ab4-47ce-8738-a60ed3b0f3f3.vmd",
+  "audio": "https://r2.vidol.chat/files/2024/10/13/9e251e88-7eb3-4fb9-8a80-b3f2733a2c2f.wav",
+  "cover": "https://r2.vidol.chat/files/2024/10/13/e5326a7e-71e9-4aaa-8412-a1f68ce024c4.webp",
+  "thumb": "https://r2.vidol.chat/files/2024/10/13/e613baaf-3003-410b-b780-fd4aa85c8117.webp",
+  "readme": "Thank you very much for your support!\r\nI hope you will enjoy this motion!\r\n\r\n-----------------------------------------------\r\n\r\nRules:\r\n- DO NOT redistribute this motion!\r\n- DO NOT resell this motion!\r\n- DO NOT claim as your own!\r\n- Credit me! Put my name {NatsumiSan} in your video description or add link to my original video!\r\n- R16, R18, etc. are allowed!\r\n- Enjoy! <3\r\n\r\n-----------------------------------------------\r\n\r\nYour model must have the following bones\r\nfor the motion to work correctly:\r\n\r\n右肩P - shoulderP_R\r\n左肩P - shoulderP_L\r\n右腕捩 - arm twist_R\r\n左腕捩 - arm twist_L\r\n右手捩 - wrist twist_R\r\n左手捩 - wrist twist_L\r\n上半身2 - upper-body2\r\n腰 - waist\r\n\r\nAdvice:\r\nFor correct work of motion, SemiStandart Bones are necessarily. Please be sure that your models have SemiStandart Bones.\r\n\r\nAlso look at this tutorial to fix hands:\r\nhttps://youtu.be/vpmrE7GpxyQ\r\n\r\n-----------------------------------------------\r\n\r\nMay 2022 ~NatsumiSan~",
+  "camera": "https://r2.vidol.chat/files/2024/10/13/b6826196-726f-4986-9ae5-d2d78628caa7.vmd",
+  "schemaVersion": 1,
+  "createAt": "2024-10-13"
+}
