@@ -1,39 +1,18 @@
 {
   "type": "object",
   "properties": {
-    "danceId": {
-      "type": "string"
-    },
-    "name": {
-      "type": "string"
-    },
-    "src": {
-      "type": "string"
-    },
-    "author": {
-      "type": "string"
-    },
-    "homepage": {
-      "type": "string"
-    },
-    "audio": {
-      "type": "string"
-    },
-    "cover": {
-      "type": "string"
-    },
-    "thumb": {
-      "type": "string"
-    },
-    "readme": {
-      "type": "string"
-    },
-    "createAt": {
-      "type": "string"
-    },
-    "schemaVersion": {
-      "type": "number"
-    }
+    "danceId": { "type": "string" },
+    "name": { "type": "string" },
+    "src": { "type": "string" },
+    "author": { "type": "string" },
+    "homepage": { "type": "string" },
+    "audio": { "type": "string" },
+    "cover": { "type": "string" },
+    "thumb": { "type": "string" },
+    "readme": { "type": "string" },
+    "createAt": { "type": "string" },
+    "schemaVersion": { "type": "number" },
+    "camera": { "type": "string" }
   },
   "required": [
     "danceId",
