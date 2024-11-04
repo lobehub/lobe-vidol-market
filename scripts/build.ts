@@ -107,7 +107,7 @@ class Builder {
       const agent = readJSONSync(resolve(agentsDir, file.name)) as VidolAgent;
 
       // format and check schema
-      const formatAgent = formatAgentSchema(agent);
+      const formatAgent: VidolAgent = formatAgentSchema(agent);
 
       // write agent to public dir
       writeJSONSync(resolve(publicAgentDir, file.name), formatAgent);
@@ -115,7 +115,15 @@ class Builder {
       // add agent meta to index
       agentIndex.push({
         agentId: id,
-        ...formatAgent,
+        author: formatAgent.author,
+        homepage: formatAgent.homepage,
+        createAt: formatAgent.createAt,
+        meta: {
+          name: formatAgent.meta.name,
+          avatar: formatAgent.meta.avatar,
+          cover: formatAgent.meta.cover,
+          description: formatAgent.meta.description,
+        },
       });
     }
 
