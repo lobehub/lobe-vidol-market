@@ -121,6 +121,7 @@ class Builder {
         meta: {
           name: formatAgent.meta.name,
           avatar: formatAgent.meta.avatar,
+          category: formatAgent.meta.category,
           cover: formatAgent.meta.cover,
           description: formatAgent.meta.description,
         },
