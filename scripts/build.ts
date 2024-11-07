@@ -1,23 +1,33 @@
 import { consola } from "consola";
 import { readJSONSync, writeJSONSync } from "fs-extra";
-import { Dirent } from "node:fs";
+import { Dirent, existsSync } from "node:fs";
 import { resolve } from "node:path";
+import { merge } from "lodash-es";
+
 import { zodToJsonSchema } from "zod-to-json-schema";
 
 import {
   agentFiles,
   danceFiles,
+  config,
   meta,
   publicDir,
   publicAgentDir,
   schemasDir,
-  agentsDir,
+  localeAgentDir,
   dancesDir,
   publicDanceDir,
 } from "./const";
 import { VidolAgent, VidolAgentSchema } from "./schema/agent";
 import { VidolDance, VidolDanceSchema } from "./schema/dance";
-import { checkDir, checkJSON } from "./utils";
+import {
+  checkDir,
+  checkJSON,
+  getBuildLocaleAgentFileName,
+  getLocaleAgentFileName,
+} from "./utils";
+import { Parser } from "./Parser";
+
 import { formatDanceSchema, formatAgentSchema } from "./check";
 
 class Builder {
@@ -95,7 +105,7 @@ class Builder {
     consola.success(`build complete`);
   };
 
-  buildAgents = async () => {
+  buildSingleLocaleAgents = (locale: string) => {
     consola.start(`build agents`);
 
     const agentIndex: VidolAgent[] = [];
@@ -103,27 +113,46 @@ class Builder {
       // if file is not json ,skip it
       if (!checkJSON(file)) continue;
 
-      const [id] = file.name.split(".");
-      const agent = readJSONSync(resolve(agentsDir, file.name)) as VidolAgent;
+      const {
+        content,
+        locale: defaultLocale,
+        id,
+      } = Parser.parseFile(file.name);
 
-      // format and check schema
-      const formatAgent: VidolAgent = formatAgentSchema(agent);
+      const localeFileName = getLocaleAgentFileName(id, locale);
+
+      // find correct agent content
+      let agent: VidolAgent;
+      if (defaultLocale === locale) {
+        agent = content;
+      } else {
+        // if locale agent is not exist, skip it
+        const filePath = resolve(localeAgentDir, localeFileName);
+        if (!existsSync(filePath)) continue;
+
+        // merge default agent with data
+        const data = readJSONSync(filePath);
+        agent = merge({}, content, data);
+      }
 
       // write agent to public dir
-      writeJSONSync(resolve(publicAgentDir, file.name), formatAgent);
+      writeJSONSync(
+        resolve(publicAgentDir, getBuildLocaleAgentFileName(id, locale)),
+        agent
+      );
 
       // add agent meta to index
       agentIndex.push({
         agentId: id,
-        author: formatAgent.author,
-        homepage: formatAgent.homepage,
-        createAt: formatAgent.createAt,
+        author: agent.author,
+        homepage: agent.homepage,
+        createAt: agent.createAt,
         meta: {
-          name: formatAgent.meta.name,
-          avatar: formatAgent.meta.avatar,
-          category: formatAgent.meta.category,
-          cover: formatAgent.meta.cover,
-          description: formatAgent.meta.description,
+          name: agent.meta.name,
+          avatar: agent.meta.avatar,
+          category: agent.meta.category,
+          cover: agent.meta.cover,
+          description: agent.meta.description,
         },
       });
     }
@@ -133,16 +162,26 @@ class Builder {
       (a, b) => new Date(b.createAt) - new Date(a.createAt)
     );
 
-    consola.info(`collected ${agents.length} agents`);
-    const agentsIndex = { ...meta, agents };
+    return agents;
+  };
 
-    const indexFileName = "index.json";
-    writeJSONSync(resolve(publicAgentDir, indexFileName), agentsIndex);
-    consola.success(`build complete`);
+  buildFullLocaleAgents = async () => {
+    for (const locale of config.outputLocales) {
+      consola.start(`build ${locale}`);
+
+      const agents = this.buildSingleLocaleAgents(locale);
+
+      consola.info(`collected ${agents.length} agents`);
+      const agentsIndex = { ...meta, agents };
+
+      const indexFileName = getBuildLocaleAgentFileName("index", locale);
+      writeJSONSync(resolve(publicDir, indexFileName), agentsIndex);
+      consola.success(`build ${locale}`);
+    }
   };
 
   buildAssets = async () => {
-    await this.buildAgents();
+    await this.buildFullLocaleAgents();
     await this.buildDances();
   };
 }

@@ -1,10 +1,11 @@
 import { kebabCase } from "lodash-es";
 import { resolve } from "node:path";
 
-import { formatAgentSchema } from "../check";
+import { formatAgentJSON } from "../check";
 import { agentsDir } from "../const";
 import { AutoSubmitBase } from "./AutoSubmitBase";
 import consola from "consola";
+import { getBuildLocaleAgentFileName } from "../utils";
 
 class AutoSubmitAgent extends AutoSubmitBase {
   protected GENERATE_LABEL = "🤖 Agent PR";
@@ -17,11 +18,12 @@ class AutoSubmitAgent extends AutoSubmitBase {
     if (!issue) return;
     consola.info(`Get issues #${this.issueNumber}`);
 
-    const { agent } = await this.formatIssue(issue);
+    const { agent, locale } = await this.formatIssue(issue);
     const comment = this.genCommentMessage(agent);
     const agentName = agent.agentId;
 
-    const fileName = `${agentName}.json`;
+    const fileName = getBuildLocaleAgentFileName(agentName, locale);
+
     const filePath = resolve(this.DIRECTORY, fileName);
 
     if (await this.checkExistingFile(fileName, comment)) return;
@@ -68,8 +70,9 @@ class AutoSubmitAgent extends AutoSubmitBase {
       model: json.model,
       params: json.params ? JSON.parse(json.params) : undefined,
     };
+    const locale: string = json.locale;
 
-    return { agent: await formatAgentSchema(agent) };
+    return { agent: await formatAgentJSON(agent, locale), locale };
   }
 
   protected getCommitMessage(name: string): string {
