@@ -135,27 +135,24 @@ class Builder {
         agent = merge({}, content, data);
       }
 
-      // format and check schema
-      const formatAgent: VidolAgent = formatAgentSchema(agent);
-
       // write agent to public dir
       writeJSONSync(
         resolve(publicAgentDir, getBuildLocaleAgentFileName(id, locale)),
-        formatAgent
+        agent
       );
 
       // add agent meta to index
       agentIndex.push({
         agentId: id,
-        author: formatAgent.author,
-        homepage: formatAgent.homepage,
-        createAt: formatAgent.createAt,
+        author: agent.author,
+        homepage: agent.homepage,
+        createAt: agent.createAt,
         meta: {
-          name: formatAgent.meta.name,
-          avatar: formatAgent.meta.avatar,
-          category: formatAgent.meta.category,
-          cover: formatAgent.meta.cover,
-          description: formatAgent.meta.description,
+          name: agent.meta.name,
+          avatar: agent.meta.avatar,
+          category: agent.meta.category,
+          cover: agent.meta.cover,
+          description: agent.meta.description,
         },
       });
     }

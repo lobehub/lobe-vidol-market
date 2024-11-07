@@ -28,7 +28,7 @@ export const formatPrompt = async (prompt: string, locale: string) => {
     : String(await remark().process(prompt));
 };
 
-export const formatAgentSchema = (agent) => {
+export const formatAgentSchema = (agent: VidolAgent) => {
   if (!agent.schemaVersion) agent.schemaVersion = meta.schemaVersion;
   if (!agent.createAt) agent.createAt = dayjs().format("YYYY-MM-DD");
 
