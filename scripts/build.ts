@@ -175,7 +175,7 @@ class Builder {
       const agentsIndex = { ...meta, agents };
 
       const indexFileName = getBuildLocaleAgentFileName("index", locale);
-      writeJSONSync(resolve(publicDir, indexFileName), agentsIndex);
+      writeJSONSync(resolve(publicAgentDir, indexFileName), agentsIndex);
       consola.success(`build ${locale}`);
     }
   };
