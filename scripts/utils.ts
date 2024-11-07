@@ -78,6 +78,7 @@ export const checkHeader = (line: string) => {
     "### src",
     "### thumb",
     "### camera",
+    "### locale",
   ];
   let check = false;
   header.forEach((item) => {

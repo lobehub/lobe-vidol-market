@@ -23,3 +23,12 @@
 ## 如何提交 Dance
 
 同上，只不过文件夹改为 `templates/dance.json`
+
+## 格式化 JSON
+
+如果需要在本地运行 `format` 脚本，需要配置相应的环境变量：
+
+| 环境变量           | 类型 | 示例                 |
+| ------------------ | ---- | -------------------- |
+| `OPENAI_API_KEY`   | 必选 | `sk-xxxxxx...xxxxxx` |
+| `OPENAI_PROXY_URL` | 可选 | `-`                  |
