@@ -21,3 +21,12 @@ If you wish to add an Agent to the list, simply add a file under the `agents` fo
 5. Submit the PR, wait for review, and upon merging, the `public/agents/index.json` file will be automatically rebuilt.
 
 - The `created` field will be automatically added, please ensure the uniqueness of `agentId`.
+
+## Format JSON
+
+To run the `format` script locally, you need to configure the following environment variables:
+
+| Environment Variable | Type     | Example              |
+| -------------------- | -------- | -------------------- |
+| `OPENAI_API_KEY`     | Required | `sk-xxxxxx...xxxxxx` |
+| `OPENAI_PROXY_URL`   | Optional | `-`                  |
